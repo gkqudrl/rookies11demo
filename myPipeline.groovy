@@ -19,7 +19,7 @@ pipeline {
     stage('Deploy') {
       steps {
         // AWS CodeDeploy 플러그인을 사용하여 배포합니다.
-        awsCodeDeployPublisher(deploymentMethod: 'ec2', applicationName: 'your-application-name', deploymentGroupName: 'your-deployment-group-name', ignoreApplicationStopFailures: false)
+        awsCodeDeployPublisher(deploymentMethod: 'ec2', applicationName: 'jenkinsDeploy', deploymentGroupName: 'jenkinsDepG', ignoreApplicationStopFailures: false)
       }
     }
   }
