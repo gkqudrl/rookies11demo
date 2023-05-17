@@ -5,14 +5,14 @@ pipeline {
     stage('Checkout') {
       steps {
         // GitHub 저장소에서 코드를 체크아웃합니다.
-        git 'https://github.com/yourusername/yourrepository.git'
+        git 'https://github.com/gkqudrl/rookies11demo.git'
       }
     }
 
     stage('Build') {
       steps {
-        // 빌드 명령어를 실행합니다.
-        sh 'your-build-command'
+        // Maven을 사용하여 프로젝트 빌드 및 패키지 생성
+        sh 'mvn clean package'
       }
     }
 
